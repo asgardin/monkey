@@ -16,7 +16,31 @@
 }
 
 
-._icon-lock-closed:before {
+._icon-nft1:before {
+	content: "\e902";
+	color: #fff;
+  }
+  ._icon-exchange:before {
+	content: "\e903";
+	color: #fff;
+  }
+  ._icon-wallet:before {
+	content: "\e904";
+	color: #fff;
+  }
+  ._icon-price:before {
+	content: "\e905";
+	color: #fff;
+  }
+  ._icon-nft:before {
+	content: "\e906";
+	color: #fff;
+  }
+  ._icon-man:before {
+	content: "\e907";
+	color: #fff;
+  }
+  ._icon-lock-closed:before {
 	content: "\e900";
   }
   ._icon-user:before {
