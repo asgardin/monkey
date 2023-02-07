@@ -1,0 +1,39 @@
+// Заголовки, загальні БЕМ блоки та інше...
+/*================================================TITLE=====================================================================*/
+.subject {
+    font-weight: 700;
+    @include adaptiveValue("font-size",80, 40 );
+    line-height: math.div(80, 80);
+    text-transform: uppercase;
+    span {
+        background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+/*================================================BOTTON=====================================================================*/
+
+.style_btn {
+    display: inline-flex;
+    background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: math.div(24, 20);
+    color: #ffffff;
+    padding: rem(8) rem(43) rem(8) rem(43);
+    border-radius: rem(20);
+    transition: all 0.5s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 7px 2px #a536ffc5;
+            color: #ffffff;
+        }
+    }
+    &:active {
+        content: "";
+        transform: scale(0.8);
+        box-shadow: none;
+    }
+}
