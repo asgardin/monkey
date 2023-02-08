@@ -1,3 +1,137 @@
 //====================================================================================================
+.footer {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    // .footer__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        column-gap:rem(20);
+    }
+
+    // .footer__img
+
+    &__img {
+        display: flex;
+        align-items: flex-end;
+        img{
+            max-width: 100%;
+        }
+        @media (max-width:rem(500)){
+             display: none; 
+        }
+    }
+
+    // .footer__crisper
+
+    &__crisper {
+    }
+}
+.crisper {
+    // .crisper__info
+
+    &__info {
+        text-align: center;
+        max-width: rem(590);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+        padding-bottom: rem(100);
+    }
+
+    // .crisper__title
+
+    &__title {
+    }
+
+    // .crisper__text
+
+    &__text {
+    }
+
+    // .crisper__botton
+
+    &__botton {
+    }
+
+    // .crisper__btn
+
+    &__btn {
+    }
+
+    // .crisper__networks
+
+    &__networks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.subject {
+}
+.style {
+    // .style_btn
+
+    &_btn {
+    }
+}
+.networks {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+
+    // .networks__list
+
+    &__list {
+        display: flex;
+        column-gap: rem(10);
+    }
+
+    // .networks__item
+
+    &__item {
+    }
+
+    // .networks__link
+
+    &__link {
+        font-size: rem(40);
+    }
+
+    // .networks__info
+
+    &__info {
+    }
+
+    // .networks__policy
+
+    &__policy {
+        display: flex;
+        justify-content: center;
+        column-gap: rem(20);
+        margin-bottom: rem(20);
+        font-size: 14px;
+        line-height: math.div( 19, 14);
+        
+        a{
+            transition: all 0.5s ease;
+           @media (any-hover: hover) {
+			&:hover {
+				color: #e002ce;
+			}
+		} 
+        }
+        
+    }
+
+    // .networks__text
+
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: math.div( 19, 14);
+    }
+}
 
 //====================================================================================================

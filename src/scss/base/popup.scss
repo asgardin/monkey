@@ -1,7 +1,7 @@
 body {
 	padding-right: rem(0) !important;
 	-webkit-overflow-scrolling: touch;
-	overflow-y: auto;
+	overflow-y: scroll !important;
 }
 
 body::after {
