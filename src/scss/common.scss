@@ -10,6 +10,8 @@
         color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
+        -webkit-box-decoration-break: clone;
+
     }
 }
 
