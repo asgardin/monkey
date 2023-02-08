@@ -58,7 +58,7 @@
 				content: "";
 				position: fixed;
 				width: 100%;
-				background-color: #fff;
+				// background-color: #fff;
 				left: -100%;
 				top: 0;
 				z-index: 2;
@@ -124,7 +124,7 @@
 }
 .authorization {
 	@media (max-width: rem(900)) {
-		position: fixed;
+		position: absolute;
 		top: rem(30);
 		right: rem(50);
 		margin-right: rem(20);
