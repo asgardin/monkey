@@ -2,106 +2,125 @@
 
    // .page__collection
 
-   &__collection {
-
-      background-color: #00FEEE;
-   }
+   &__collection {}
 }
 
 .collection {
-
+   background-color: #00FEEE;
+   @include adaptiveValue("padding-top", 100, 40);
+   @include adaptiveValue("padding-bottom", 100, 40);
    // .collection__container
 
-   &__container {
-      padding-top: rem(25);
-      padding-bottom: rem(80);
-   }
+   &__container {}
 
    // .collection__title
 
    &__title {
-      max-width: rem(484);
+      display: flex;
+      flex-direction: column;
       text-align: center;
-     margin: 0 auto rem(80);
-
+      @include adaptiveValue("margin-bottom", 80, 30);
    }
 
    // .collection__box
 
-   &__box {
-      // background-image: url(@img/collection/big-11.png);
-      // background-position: center;
-      // background-repeat: no-repeat;
-      position: relative;
-
-
-      &::before{
-         @include adaptiveValue("opacity",100 ,20);
-
-         content: "";
-         background-image: url(@img/collection/big-11.png) ;
-         background-size: contain;
-         background-repeat: no-repeat;
-         background-position: center;
-         position: absolute;
-         width: 100%;
-         height: 100%;
-          @media (max-width: rem(1150))  { 
-            opacity: 0.5;
-          }
-       
-         
-      }
-   }
+   &__box {}
 }
 
 .box {
    display: grid;
-   grid-template-columns: rem(288)  rem(288);
+   grid-template-columns: rem(288) rem(288);
    justify-content: space-between;
+   position: relative;
+   column-gap: rem(15);
 
-    @media (max-width: rem(1150))  {
-      grid-template-columns: rem(288) rem(288);
+   &::before {
+      content: "";
+      background: url(@img/collection/big-11.png) center / contain no-repeat;
+      position: absolute;
+      width: rem(354);
+      height: rem(683);
+      top: calc(50% - rem(341));
+      left: calc(50% - 177px);
+
+      @media (max-width: rem(1150)) {
+         opacity: 0.5;
+      }
+
+      @media (max-width: $mobile) {
+         // background-repeat: repeat;
+         // height: 100%;
+         // top: 0;
+         // background-size: contain;
+         display: none;
+      }
+   }
+
+   @media (max-width: rem(1150)) {
       justify-content: space-around;
-     }
+   }
+
+   @media (max-width: $mobile) {
+      grid-template-columns: rem(288);
+      row-gap: rem(35);
+   }
+
    // .box__column
 
    &__column {
       display: grid;
       row-gap: rem(35);
-      align-items: start;
+
+      &::before {
+         content: "";
+         background: url(@img/collection/big-11.png) center / contain no-repeat;
+         position: absolute;
+         width: rem(354);
+         height: rem(683);
+         top: calc(50% - rem(341));
+         opacity: 0.3;
+         display: none;
+
+         @media (max-width: $mobile) {
+            display: block;
+
+         }
+      }
    }
 
-   // .box__middle
+}
 
-   // &__middle {
-   //   justify-self: center;
-   //   align-self: flex-end;
-   //   @media (max-width: rem(1150)){
-   //    display: none;
-   //   }
-   // }
+.column--1 {
+   @media (max-width: $mobile) {
+      &::before {
+         left: -100%;
+      }
+   }
+}
+
+.column--2 {
+   @media (max-width: $mobile) {
+      &::before {
+         right: -100%;
+      }
+   }
 }
 
 .column {
-
-position: relative;
+   display: grid;
+   position: relative;
 
    // .column__item
 
-   &__item {
+   &__item {}
 
-   }
-
-   &__item-block{
-      
-      display: grid;
-      row-gap: rem(10);
+   &__item-block {
+      position: relative;
    }
 }
 
 .item-column {
- 
+
    // .item-column__top
 
 
@@ -111,6 +130,7 @@ position: relative;
       grid-template-columns: rem(70) 1fr;
       column-gap: rem(25);
       align-items: center;
+      margin-bottom: rem(15);
    }
 
    // .item-column__user
@@ -119,18 +139,23 @@ position: relative;
 
    // .item-column__info
 
-   &__info {
-      display: grid;
-      row-gap: rem(3);
-   }
+   &__info {}
 
    // .item-column__hash
 
-   &__hash {}
+   &__hash {
+      margin-bottom: rem(3);
+      font-weight: 700;
+      font-size: rem(22);
+      line-height: 1.2;
+   }
 
    // .item-column__author
 
-   &__author {}
+   &__author {
+      font-size: rem(15);
+      line-height: 1.26;
+   }
 
    // .item-column__images
 
@@ -153,7 +178,6 @@ position: relative;
    // .image__small-top
 
    &__small-top {
-      align-self: start;
       grid-area: small-1;
    }
 
@@ -167,5 +191,4 @@ position: relative;
 
 
 
-
-
+// ========================================================
