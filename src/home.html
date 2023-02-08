@@ -10,14 +10,14 @@
 		@@include('html/_popup.htm',{})
 		<main class="page">
 
-			<section class="page__main main">
+			<section id="main" class="page__main main">
 				<div class="main__container">
 
-					<div class="main__content content">
-						<h1 class="content__title subject">create your own <span> nft dream</span> gallery</h1>
-						<p class="content__text">The Larges NFT Marketplace. A utomatic and truly unique digital
+					<div class="main__content content" >
+						<h1 class="content__title subject" data-aos="fade-right" data-aos-offset="100">create your own <span> nft dream</span> gallery</h1>
+						<p class="content__text" data-aos="fade-right" data-aos-offset="200">The Larges NFT Marketplace. A utomatic and truly unique digital
 							creation. Signe d and issued by the creator, made possible by blockchain technologi</p>
-						<div class="content__botton ">
+						<div class="content__botton " data-aos="fade-right" data-aos-offset="250">
 							<a type="bottom" class="content__btn style_btn"
 								href="https://opensea.io/collection/monkeysmeta" target="_blank">OpenSea</a>
 						</div>
@@ -53,10 +53,10 @@
 
 					</div>
 
-					<div class="about__info info">
+					<div class="about__info info"data-aos="fade-left">
 
-						<div class="info__content">
-							<h2 class="info__title subject">About <span>collection</span></h2>
+						<div class="info__content" data-aos="fade-left" data-aos-offset="100">
+							<h2 class="info__title subject" >About <span>collection</span></h2>
 							<p class="info__text ">Content creation optimized for social media engagment and tangible
 								results.</p>
 							<p class="info__text ">Social media marketing through turn key influencer marketing
@@ -64,7 +64,7 @@
 								collection.</p>
 						</div>
 
-						<div class="info__counter counter">
+						<div class="info__counter counter" data-aos="fade-left" data-aos-offset="200">
 
 							<div class="counter__box">
 								<div class="counter__number subject"><span>93%</span></div>
@@ -91,8 +91,8 @@
 				</div>
 			</section>
 
-			@@include('section/section-3.html',{})
-			@@include('section/section-4.html',{})
+			@@include('section/choose.html',{})
+			@@include('section/carousel.html',{})
 
 			@@include('section/collection.html',{})
 			@@include('section/question.html',{})

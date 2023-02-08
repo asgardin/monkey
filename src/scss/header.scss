@@ -98,6 +98,13 @@
 	// .menu__item
 
 	&__item {
+		transition: all 0.5s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+				color: #e002ce;
+			}
+		}
 	}
 
 	// .menu__link
@@ -106,12 +113,6 @@
 		font-weight: 700;
 		@include adaptiveValue("font-size", 20, 10);
 		line-height: math.div(24, 20);
-		transition: all 0.5s ease;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #e002ce;
-			}
-		}
 		@media (max-width: rem(900)) {
 			font-size: rem(40);
 		}
@@ -149,6 +150,13 @@
 	&__item {
 		display: flex;
 		align-items: center;
+		transition: all 0.5s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+				color: #e002ce;
+			}
+		}
 	}
 
 	// .authorization__link
@@ -157,12 +165,6 @@
 		font-weight: 700;
 		@include adaptiveValue("font-size", 20, 10);
 		line-height: math.div(24, 20);
-		transition: all 0.5s ease;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #e002ce;
-			}
-		}
 		@media (max-width: rem(900)) {
 			@include adaptiveValue("font-size", 20, 16);
 		}

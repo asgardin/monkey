@@ -91,6 +91,13 @@
     // .networks__item
 
     &__item {
+        transition: all .5s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+                color: #e002ce;
+            }
+        }
     }
 
     // .networks__link
@@ -115,12 +122,13 @@
         line-height: math.div( 19, 14);
         
         a{
-            transition: all 0.5s ease;
-           @media (any-hover: hover) {
-			&:hover {
-				color: #e002ce;
-			}
-		} 
+            transition: all .5s ease;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.1);
+                    color: #e002ce;
+                }
+            }
         }
         
     }
