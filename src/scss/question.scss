@@ -1,0 +1,114 @@
+.page {
+
+   // .page__questions
+
+   &__questions {}
+}
+
+.questions {
+   background-color: #000;
+   @include adaptiveValue("padding-top", 100, 40);
+   @include adaptiveValue("padding-bottom", 100, 40);
+   // .questions__container
+
+   &__container {}
+
+   // .questions__title
+
+   &__title {
+      color: #fff;
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 80, 30);
+   }
+
+   // .questions__box
+
+   &__box {
+      max-width: rem(700);
+      margin: 0 auto;
+      padding: rem(50);
+      border: 1px solid #666666;
+      border-radius: 30px;
+   }
+}
+
+.subject {}
+
+.spollers {
+   // .spollers__item
+
+   &__item {
+      color: #fff;
+      position: relative;
+      padding-bottom: rem(20);
+
+      &:not(:first-child) {
+         padding-top: rem(20);
+      }
+
+
+      &::after {
+         content: "";
+         width: 100%;
+         height: rem(1);
+         left: 0;
+         bottom: 0;
+         background-color: #666666;
+         position: absolute;
+
+      }
+   }
+
+   // .spollers__title
+
+   &__title {
+      width: 100%;
+      cursor: default;
+      text-align: left;
+      position: relative;
+      padding-right: rem(39);
+   
+      ._spoller-init & {
+         cursor: pointer;
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            background-color: rgb(244, 240, 240);
+            height: 2px;
+            width: 15px;
+            transition: transform 0.5s ease 0s;
+         }
+
+         &::before {
+            transform: translate(-75%, -50%) rotate(40deg);
+         }
+
+         &::after {
+            transform: translate(0, -50%) rotate(-40deg);
+         }
+
+         &._spoller-active {
+            &::before {
+               transform: translateX(-75%) rotate(-40deg);
+            }
+
+            &::after {
+               transform: rotate(40deg);
+            }
+         }
+
+      }
+
+   }
+
+   // .spollers__body
+
+   &__body {
+      padding: rem(10) rem(15) 0;
+      padding-right: rem(39);
+   
+   }
+}

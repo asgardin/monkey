@@ -3,21 +3,21 @@
 
 // Блок зі спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
+	// display: grid;
+	// gap: 15px;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+	// font-size: rem(20);
 }
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
+	// border: 1px solid #eee;
+	// padding: rem(10) rem(15);
+	// border-radius: rem(5);
 	position: relative;
 	._spoller-init & {
 		cursor: pointer;
@@ -27,7 +27,7 @@
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: rgb(244, 240, 240);
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
@@ -84,6 +84,6 @@
 // Контент спойлера
 .spollers__body {
 	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+	// border-radius: rem(5);
+	// border: 1px solid #eee;
 }

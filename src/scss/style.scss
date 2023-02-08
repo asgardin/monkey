@@ -150,8 +150,13 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "footer";
+
+@import "collection";
+@import "question";
+
 @import "section-3";
 @import "section-4";
+
 
 
 // Підключення стилів окремих сторінок

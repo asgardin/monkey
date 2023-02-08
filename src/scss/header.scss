@@ -54,7 +54,19 @@
 			overflow: auto;
 			justify-content: flex-end;
 			transition: all 0.5s ease 0s;
-			
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				background-color: #fff;
+				left: -100%;
+				top: 0;
+				z-index: 2;
+				min-height: rem(90);
+				transition: all 0.5s ease 0s;
+
+			}
+
 
 			.menu-open & {
 				left: 0;
@@ -112,10 +124,11 @@
 }
 .authorization {
 	@media (max-width: rem(900)) {
-		position: absolute;
+		position: fixed;
 		top: rem(30);
 		right: rem(50);
 		margin-right: rem(20);
+		z-index: 5;
 	}
 	// @media (max-width: rem(900)) {
 	// 	position: absolute;
