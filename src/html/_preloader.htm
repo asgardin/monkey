@@ -51,17 +51,17 @@
 		}
 		/* Блок з лічильником */
 		.fls-preloader__counter{
-			font-size: 10rem;
+			/* font-size: 30rem; */
 		}
 		/* Прогресбар */
 		.fls-preloader__line{}
 		/* Лінія прогресбару */
-		.fls-preloader__line span{
+		/* .fls-preloader__line span{
 			display: inline-block;
 			transition: width 0.2s ease;
 			height: 0.8rem;
 			background-color: #7A956B;
-		}
+		} */
 	</style>
 	<!-- Скріпт прелоадера -->
 	<script>
@@ -72,8 +72,7 @@
 				const preloaderTemplate =`
 					<div class="fls-preloader">
 						<div class="fls-preloader__body">
-							<div class="fls-preloader__counter">0%</div>
-							<div class="fls-preloader__line"><span></span></div>
+							<img src="@img/Logo.svg" class="fls-preloader__counter">
 						</div>
 					</div>`;
 				document.querySelector('html').insertAdjacentHTML("beforeend",preloaderTemplate);

@@ -1,150 +1,109 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		@@include('html/_popup.htm',{})
+		<main class="page">
+
+			<section id="main" class="page__main main">
+				<div class="main__container">
+
+					<div class="main__content content" >
+						<h1 class="content__title subject" data-aos="fade-right" data-aos-offset="100">create your own <span> nft dream</span> gallery</h1>
+						<p class="content__text" data-aos="fade-right" data-aos-offset="200">The Larges NFT Marketplace. A utomatic and truly unique digital
+							creation. Signe d and issued by the creator, made possible by blockchain technologi</p>
+						<div class="content__botton " data-aos="fade-right" data-aos-offset="250">
+							<a type="bottom" class="content__btn style_btn"
+								href="https://opensea.io/collection/monkeysmeta" target="_blank">OpenSea</a>
+						</div>
+					</div>
+
+					<div class="main__img ">
+						<img src="@img/main/main-monkey.svg" alt="main-monkey">
+					</div>
+
+				</div>
+			</section>
+
+			<section id="about" class="page__about about">
+				<div class="about__container">
+
+					<div class="about__grid grid">
+
+						<div class="grid__img">
+							<img src="@img/about/1.svg" alt="#">
+						</div>
+
+						<div class="grid__img">
+							<img src="@img/about/2.svg" alt="#">
+						</div>
+
+						<div class="grid__img">
+							<img src="@img/about/3.svg" alt="#">
+						</div>
+
+						<div class="grid__img">
+							<img src="@img/about/4.svg" alt="#">
+						</div>
+
+					</div>
+
+					<div class="about__info info"data-aos="fade-left">
+
+						<div class="info__content" data-aos="fade-left" data-aos-offset="100">
+							<h2 class="info__title subject" >About <span>collection</span></h2>
+							<p class="info__text ">Content creation optimized for social media engagment and tangible
+								results.</p>
+							<p class="info__text ">Social media marketing through turn key influencer marketing
+								compaigns and social media account managment to grow your digital art and drive your
+								collection.</p>
+						</div>
+
+						<div class="info__counter counter" data-aos="fade-left" data-aos-offset="200">
+
+							<div class="counter__box">
+								<div class="counter__number subject"><span>93%</span></div>
+								<p class="counter__text">Sync & track</p>
+							</div>
+
+							<div class="counter__box">
+								<div class="counter__number subject"><span>25X</span></div>
+								<p class="counter__text">Up value.</p>
+							</div>
+
+							<div class="counter__box">
+								<div class="counter__number subject"><span>50K</span></div>
+								<p class="counter__text">Of members.</p>
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+
+				</div>
+			</section>
+
+			@@include('section/choose.html',{})
+			@@include('section/carousel.html',{})
+
+			@@include('section/collection.html',{})
+			@@include('section/question.html',{})
+
+
+
+
+			@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_preloader.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

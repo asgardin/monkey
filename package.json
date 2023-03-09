@@ -19,6 +19,7 @@
 		"bem": "fls-bemtree-from-html"
 	},
 	"devDependencies": {
+		"aos": "^2.3.4",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "latest",
@@ -71,7 +72,6 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"aos": "^2.3.4",
 		"gulp-cheerio": "^1.0.0",
 		"simplebar": "latest"
 	}

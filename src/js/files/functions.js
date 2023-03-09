@@ -412,6 +412,12 @@ export function menuInit() {
 		});
 	};
 }
+document.addEventListener("click", function (e) {
+    if (e.target.closest('.menu__link')) {
+       bodyLockToggle();
+       document.documentElement.classList.remove("menu-open");
+  }
+});
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");

@@ -27,6 +27,8 @@
 	// .header__logo
 
 	&__logo {
+		position: relative;
+		z-index: 5;
 	}
 
 	// .header__menu
@@ -47,9 +49,10 @@
 			position: fixed;
 			width: 100%;
 			height: 100%;
-			left: -100%;
-			top: 0;
-			background: url(img/main/burger-bg.png) center/cover no-repeat;
+			left: 0;
+			top: -100%;
+			background-color: #ffffff;
+			// background: url(@img/main/burger.png) left fixed  no-repeat  #ffffff;
 			// padding: rem(180) rem(15) rem(15) rem(30);
 			overflow: auto;
 			justify-content: flex-end;
@@ -58,21 +61,19 @@
 				content: "";
 				position: fixed;
 				width: 100%;
-				// background-color: #fff;
-				left: -100%;
-				top: 0;
+				background-color: #fff;
+				left: 0;
+				top: -100%;
 				z-index: 2;
-				min-height: rem(90);
+				min-height: rem(100);
 				transition: all 0.5s ease 0s;
-
 			}
 
-
 			.menu-open & {
-				left: 0;
+				top: 0;
 
 				&::before {
-					left: 0;
+					top: 0;
 				}
 			}
 		}
@@ -87,7 +88,7 @@
 		@media (max-width: rem(900)) {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-end;
+			align-items: center;
 			padding-top: rem(200);
 			padding-right: rem(10);
 			padding-bottom: rem(20);
@@ -111,7 +112,7 @@
 
 	&__link {
 		font-weight: 700;
-		@include adaptiveValue("font-size", 20, 10);
+		font-size: rem(17);
 		line-height: math.div(24, 20);
 		@media (max-width: rem(900)) {
 			font-size: rem(40);
@@ -125,11 +126,9 @@
 }
 .authorization {
 	@media (max-width: rem(900)) {
-		position: absolute;
-		top: rem(30);
-		right: rem(50);
-		margin-right: rem(20);
-		z-index: 5;
+		display: flex;
+		justify-content: center;
+		padding-top: rem(50);
 	}
 	// @media (max-width: rem(900)) {
 	// 	position: absolute;
